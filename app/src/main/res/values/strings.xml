@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Peso &amp; Saúde</string>
-    <string name="activity_main_name">Peso e Saude</string>
-    <string name="activity_main_cadastro_name">Cadastro de Usuário</string>
-    <string name="activity_main_peso_name">Cadastro de Pesos</string>
+    <string name="activity_cadastro_name">Cadastro de Usuário</string>
+    <string name="activity_peso_name">Cadastro de Pesos</string>
+    <string name="activity_lista_peso_name">Relatório de Pesos</string>
     <string name="lblLogin">Login</string>
     <string name="lblSenha">Senha</string>
     <string name="lblNomeCompleto">Nome Completo</string>
@@ -16,6 +16,8 @@
     <string name="txtEntrar">Entrar</string>
     <string name="txtCadastrar">Cadastrar</string>
     <string name="txtCadastrarPeso">Cadastrar Peso</string>
+    <string name="txtConsultarPesos">Consultar Pesos</string>
     <string name="txtEnviar">Enviar</string>
     <string name="txtVerificar">Verificar</string>
+    <string name="txtNoticias">Clique aqui para ver notícias relacionadas a alimentação</string>
 </resources>

@@ -82,9 +82,9 @@ public class DBAdapter {
                 KEY_EMAIL, KEY_IDADE, KEY_ALTURA}, null, null, null, null, null);
     }
 
-    public Cursor getAllPesos() {
+    public Cursor getAllPesosUsuario(long idUsuario) {
         return db.query(DATABASE_TABLE_PESO, new String[]{KEY_ROWID, KEY_ID_USER, KEY_PESO,
-                KEY_DATA}, null, null, null, null, null);
+                KEY_DATA}, KEY_ID_USER + " = " + idUsuario, null, null, null, null);
     }
 
     public Cursor getPesoMaisRecente(long idUser) {
@@ -98,11 +98,11 @@ public class DBAdapter {
         return mCursor;
     }
 
-    public Cursor getDoisUltimosPesos(long idUser) {
+    public Cursor getUltimosPesos(long idUser) {
         Cursor mCursor =
                 db.query(true, DATABASE_TABLE_PESO, new String[]{KEY_ROWID, KEY_ID_USER, KEY_PESO,
                                 KEY_DATA}, KEY_ID_USER + "=" + idUser, null,
-                        null, null, KEY_DATA + " desc", "2");
+                        null, null, KEY_DATA + " desc", null);
         if (mCursor != null) {
             mCursor.moveToFirst();
         }

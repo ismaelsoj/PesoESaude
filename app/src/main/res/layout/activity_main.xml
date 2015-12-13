@@ -1,45 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:weightSum="1">
+    android:weightSum="1"
+    tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/labelMensagem"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/labelBoasVindas"
-        android:layout_weight="0.10" />
+        android:layout_weight="0.10"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.10"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/botaoCadastrarPeso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/txtCadastrarPeso" />
+
+        <Button
+            android:id="@+id/botaoConsultaPesos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtConsultarPesos" />
+    </LinearLayout>
 
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/labelPeso"
-        android:layout_weight="0.10" />
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/labelIMC"
-        android:layout_weight="0.10" />
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/labelVariacaoPeso"
-        android:layout_weight="0.10" />
-
-    <Button
+        android:id="@+id/lblNoticias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/txtCadastrarPeso"
-        android:id="@+id/botaoCadastrarPeso"
-        android:layout_gravity="right" />
+        android:layout_weight="0.10"
+        android:autoLink="web"
+        android:text="@string/txtNoticias"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
 </LinearLayout>
