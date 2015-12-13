@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Peso &amp; Saúde</string>
+    <string name="activity_main_name">Peso e Saude</string>
+    <string name="activity_main_cadastro_name">Cadastro de Usuário</string>
+    <string name="activity_main_peso_name">Cadastro de Pesos</string>
+    <string name="lblLogin">Login</string>
+    <string name="lblSenha">Senha</string>
+    <string name="lblNomeCompleto">Nome Completo</string>
+    <string name="lblIdade">Idade</string>
+    <string name="lblPeso">Peso</string>
+    <string name="lblDataPeso">Data da pesagem informada</string>
+    <string name="lblData">Data</string>
+    <string name="lblAltura">Altura (em cm)</string>
+    <string name="lblNomeUsuario">Nome de Usuário</string>
+    <string name="lblEmail">Email</string>
+    <string name="txtEntrar">Entrar</string>
+    <string name="txtCadastrar">Cadastrar</string>
+    <string name="txtCadastrarPeso">Cadastrar Peso</string>
+    <string name="txtEnviar">Enviar</string>
+    <string name="txtVerificar">Verificar</string>
+</resources>
