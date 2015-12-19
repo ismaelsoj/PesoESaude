@@ -14,3 +14,4 @@ Por último, há um link para a página do programa Bem Estar da Globo contendo 
 ## Observações
 <li>Para cadastrar um peso devem ser informados todos os dados (o campo e-mail já foi criado pensando em uma evolução do APP para manter contato com o usuário futuramente). 
 <li>O campo data deve ser informado no formato dd/MM/yyyy.
+<li>A apk do projeto está na pasta apk na raiz do projeto.
