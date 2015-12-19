@@ -12,6 +12,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 
+/**
+ * Essa Activity representa um ListView adaptado para suportar duas colunas.
+ */
 public class ListaPesosActivity extends AppCompatActivity {
 
     @Override
@@ -25,16 +28,17 @@ public class ListaPesosActivity extends AppCompatActivity {
         HashMap<String, String> map1, map2;
         mylist = new ArrayList<HashMap<String, String>>();
         mylist_title = new ArrayList<HashMap<String, String>>();
-
-
         map1 = new HashMap<String, String>();
-
+        /*
+         * Define os dados relativos aos títulos das colunas.
+         */
         map1.put("data", "Data");
         map1.put("peso", "Peso");
         mylist_title.add(map1);
-
-
         try {
+            /*
+             * Instancia o cabeçalho do ListView.
+             */
             adapter_title = new SimpleAdapter(this, mylist_title, R.layout.row,
                     new String[]{"data", "peso"}, new int[]{
                     R.id.data, R.id.peso});
@@ -43,22 +47,26 @@ public class ListaPesosActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        /********************************************************/
-        /**********Display the contents************/
+        /*
+         * Recupera todos os pesos cadastrados.
+         */
         DBAdapter db = new DBAdapter(this);
         db.open();
         Cursor c = db.getAllPesosUsuario(idUsuario);
         c.moveToFirst();
+        /*
+         * Preenche o mapa que será usado para popular o ListView.
+         */
         do {
             map2 = new HashMap<String, String>();
             map2.put("data", new SimpleDateFormat("dd/MM/yyyy").format(new Date(c.getLong(3))));
             map2.put("peso", Double.toString(c.getDouble(2)));
             mylist.add(map2);
         } while (c.moveToNext());
-
-
         try {
+            /*
+             * Instancia o ListView com duas colunas
+             */
             adapter = new SimpleAdapter(this, mylist, R.layout.row,
                     new String[]{"data", "peso"}, new int[]{
                     R.id.data, R.id.peso});
@@ -67,10 +75,5 @@ public class ListaPesosActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        /********************************************************/
-
     }
-
-
 }

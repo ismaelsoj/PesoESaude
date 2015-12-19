@@ -19,6 +19,9 @@ public class CadastroUserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_user);
         Button btnCadastro = (Button) findViewById(R.id.botaoEnviar);
+        /*
+         * Recupera os dados informados pelo usuário e grava no banco.
+         */
         btnCadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,6 +36,9 @@ public class CadastroUserActivity extends AppCompatActivity {
                 long retornoUser = 0;
                 long retornoPeso = 0;
                 retornoUser = db.insertUser(usuario, email, idade, altura);
+                /*
+                 * Cadastra o primeiro peso caso o usuário tenha sido salvo com sucesso.
+                 */
                 if (retornoUser > 0) {
                     try {
                         retornoPeso = db.insertPeso(retornoUser, peso, new SimpleDateFormat("dd/MM/yyyy").parse(dataPesagem).getTime());
@@ -46,6 +52,9 @@ public class CadastroUserActivity extends AppCompatActivity {
                 } else {
                     mensagemRetorno = "Ocorreu um erro ao gravar o usuário.";
                 }
+                /*
+                 * Exibe a mensagem final do cadastro para o usuário e volta para a tela principal.
+                 */
                 Toast.makeText(CadastroUserActivity.this, mensagemRetorno, Toast.LENGTH_LONG).show();
                 Intent it = new Intent(v.getContext(), MainActivity.class);
                 startActivity(it);

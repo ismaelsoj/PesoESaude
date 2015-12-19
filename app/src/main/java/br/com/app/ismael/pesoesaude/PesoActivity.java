@@ -11,6 +11,9 @@ import android.widget.Toast;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
+/**
+ * Classe que representa a Activity de cadastro de pesos.
+ */
 public class PesoActivity extends AppCompatActivity {
 
     @Override
@@ -38,6 +41,9 @@ public class PesoActivity extends AppCompatActivity {
                 } else {
                     mensagemRetorno = "Ocorreu um erro ao tentar cadastrar esse peso.";
                 }
+                /*
+                 * Exibe a mensagem relativa ao cadastro e volta para a tela principal.
+                 */
                 Toast.makeText(PesoActivity.this, mensagemRetorno, Toast.LENGTH_LONG).show();
                 Intent it = new Intent(v.getContext(), MainActivity.class);
                 startActivity(it);
